@@ -1,0 +1,21 @@
+@hostname=http://localhost
+@port=5264
+@host={{hostname}}:{{port}}
+
+### Get the Hello World Roots ###
+
+GET {{host}}
+
+### Get the Hello World Roots ###
+
+### Get the Hello World Roots ###
+
+GET {{host}}/api
+
+### Get the Hello World Roots ###
+
+### Get Courses ###
+
+GET {{host}}/api/courses
+
+### Get Courses ###
