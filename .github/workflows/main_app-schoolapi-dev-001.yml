@@ -20,6 +20,7 @@ env:
   AZURE_WEBAPP_PACKAGE_PATH: "." # set this to the path to your web app project, defaults to the repository root
   DOTNET_VERSION: "8.x" # set this to the .NET Core version to use
   PUBLISH_ROOT: "." # set this to a local directory for publishing the app
+  UPLOAD_NAME: "schoolapp" # set this to the name of the artifact to upload
 
 defaults:
   run:
@@ -46,7 +47,7 @@ jobs:
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v4
         with:
-          name: .net-app
+          name: ${{env.UPLOAD_NAME}}
           path: ${{env.PUBLISH_ROOT}}/lmsapp
 
   deploy:
@@ -62,7 +63,7 @@ jobs:
       - name: Download artifact from build job
         uses: actions/download-artifact@v4
         with:
-          name: .net-app
+          name: ${{env.UPLOAD_NAME}}
 
       - name: Login to Azure
         uses: azure/login@v2
