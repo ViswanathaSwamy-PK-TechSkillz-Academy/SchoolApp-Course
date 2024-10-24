@@ -4,6 +4,6 @@ public static partial class Constants
 {
     public static class AzSQLServerDatabase
     {
-        public static string Name => "SchoolDatabase";
+        public static string Name => "SchoolAppDbConnection";
     }
 }
