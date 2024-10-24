@@ -1,6 +1,4 @@
-using Microsoft.Extensions.Configuration;
 using School.API.Extensions;
-using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
 
